@@ -8,45 +8,46 @@ variable "mariadb_repository" {
 variable "mariadb_chart" {
     type = string
 }
-variable "mariadb.enabled" {
+
+variable "db_mariadb_root_password" {
     type = string
 }
-variable "mariadb.rootUser.password" {
+variable "db_mariadb_enabled" {
+    type = bool
+}
+variable "db_mariadb_name" {
     type = string
 }
-variable "mariadb.db.name" {
+variable "db_mariadb_user" {
     type = string
 }
-variable "mariadb.db.user" {
+variable "db_mariadb_password" {
     type = string
 }
-variable "mariadb.db.password" {
+variable "db_mariadb_replication_enabled" {
     type = string
 }
-variable "mariadb.replication.enabled" {
+variable "db_mariadb_persistence_enabled" {
+    type = bool
+}
+variable "db_mariadb_persistence_accessmodes" {
+    type = bool
+}
+variable "db_mariadb_persistence_size" {
     type = string
 }
-variable "mariadb.master.persistence.enabled" {
+variable "db_external_host" {
     type = string
 }
-variable "mariadb.master.persistence.accessModes" {
+variable "db_external_user" {
     type = string
 }
-variable "mariadb.master.persistence.size" {
+variable "db_external_password" {
     type = string
 }
-variable "externalDatabase.host" {
+variable "db_external_database" {
     type = string
 }
-variable "externalDatabase.user" {
-    type = string
-}
-variable "externalDatabase.password" {
-    type = string
-}
-variable "externalDatabase.database" {
-    type = string
-}
-variable "externalDatabase.port" {
-    type = string
+variable "db_external_port" {
+    type = number
 }
