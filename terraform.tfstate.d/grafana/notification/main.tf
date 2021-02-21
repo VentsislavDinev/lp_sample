@@ -7,6 +7,6 @@ resource "grafana_alert_notification" "email_someteam" {
 
   settings = {
     addresses   = var.addresses
-    uploadImage = var.uploadImage
+    uploadImage = var.Is_upload_image
   }
 }
